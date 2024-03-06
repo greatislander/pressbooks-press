@@ -1,0 +1,21 @@
+// Media
+
+$image-alignnone-image-maxwidth: 70% !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/media';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/media';
+
+
+.wp-caption.alignnone figcaption, .wp-caption.alignnone .wp-caption-text {
+  box-sizing: border-box;
+  @if $type == 'prince' {
+      width: 25% !important;
+	  display: inline-block;
+	  float: outside;
+	  margin-inside: 5%;
+    }
+  font-size: .9em;	
+}

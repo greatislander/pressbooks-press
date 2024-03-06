@@ -1,0 +1,53 @@
+// Special Elements
+
+$sidebar-width: 20% !default;
+$textbox-sidebar-margin-inside: .25em !default;
+
+// Textbox
+$textbox-border-style: none !default;
+$textbox-padding-top: 1.5em !default;
+$textbox-padding-bottom: 1.5em !default;
+$textbox-font-size: .9em !default;
+
+$textbox-text-indent: 0em !default;
+
+// Columns
+$column-twocolumn-font-size: 0.9em !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/specials';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/specials';
+
+// Textbox sidebar 
+
+@if $type == 'web' {
+	.textbox--sidebar {
+		max-width: 30%;
+		padding: 1em;
+	}
+}
+
+// Textbox 
+@if $type == 'prince' {
+	.textbox {
+		max-width: 70%;
+		margin-outside: 30%;
+	}
+	.textbox.textbox--sidebar {
+		max-width: 19%;
+		margin-outside: initial;
+	}
+	.fullwidth, .textbox.fullwidth {
+		max-width: 100%;
+		margin-outside: initial;
+	}
+}
+
+// Textbox lists spacing fix
+
+.textbox ul, .textbox ol {
+	margin-left: 0em;
+	padding-left: .75em;
+}

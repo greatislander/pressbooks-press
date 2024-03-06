@@ -1,0 +1,51 @@
+// Structure
+
+$running-content-position: 'top-outside' !default;
+$left-running-separator: '\A0\A0\A0\A0\A0\A0\A0\A0' !default;
+$right-running-separator: '\A0\A0\A0\A0\A0\A0\A0\A0' !default;
+$first-numbering-position: 'bottom-outside' !default;
+$first-running-content-position: null !important;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/structure';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/structure';
+
+// Page Break Rules
+
+h1, h2, h3, h4, h5, h6 {
+	page-break-inside: avoid;
+	page-break-after: avoid;
+}
+
+.textbox.sidebar {
+	page-break-inside: avoid;
+}
+
+// The defining characteristic of this theme is the wide outside margin. These variables control the width of the text and the outside margins.
+
+$margin-outside: 30%;
+$text-width: 70%;
+
+// Add the margin to elements in a chapter.
+
+@if $type == 'prince' {
+    .chapter p, .chapter h1, .chapter h2, .chapter h3, .chapter h4, .chapter h5, .chapter h6,.chapter ol, .chapter ul, .chapter .blockquote, div.footnotes {
+        margin-outside: $margin-outside;
+    }
+	
+    .front-matter p, .front-matter h1, .front-matter h2, .front-matter h3, .front-matter h4, .front-matter h5, .front-matter h6,.front-matter ol, .front-matter ul, .front-matter .blockquote, div.footnotes {
+    	margin-outside: $margin-outside;
+	}	
+
+	
+    .textbox h1, .textbox h2, .textbox h3, .textbox h4, .textbox h5, .textbox h6, .textbox p, .textbox img, .textbox ol, .textbox ul, .textbox.blockquote {
+	    margin-outside: initial;
+    }
+
+    div.chapter-title-wrap {
+	    margin-outside: $margin-outside;
+    }
+    
+}

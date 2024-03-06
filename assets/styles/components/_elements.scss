@@ -1,0 +1,35 @@
+// Elements
+
+$body-font-family: $font-1 !default;
+$body-font-size: (
+  epub: small,
+  prince: 10.5pt,
+  web: 1em
+) !default;
+$body-font-style: normal !default;
+$body-font-weight: normal !default;
+$body-line-height: (13 / 9) * 1em !default;
+
+$para-indent: 2em !default;
+
+// Headings
+// Heading 1
+
+$h1-font-size: (14 / 10.5) * 1em !default;
+$h1-text-transform: uppercase !default;
+$h1-font-weight: bold !default;
+$h1-align: left !default;
+
+// Heading 2
+
+$h2-font-size: (14 / 10.5) * 1em !default;
+$h2-text-transform: uppercase !default;
+$h2-font-weight: bold !default;
+$h2-align: left !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/elements';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/elements';
+

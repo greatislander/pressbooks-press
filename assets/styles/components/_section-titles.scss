@@ -1,0 +1,68 @@
+// Section Titles
+
+$section-header-margin-top: (
+   epub: 1em,
+   prince: 1in,
+   web: 1em
+) !default;
+
+
+$section-title-margin-bottom: (
+  epub: .5em,
+  prince: .25em,
+  web: .5em
+) !default;
+
+$section-title-align: left !default;
+
+$section-title-font-size: (
+  epub: (24 / 10.5) * 1em,
+  prince: (24 / 10.5) * 1em,
+  web: (24 / 10.5) * 1em
+) !default;
+
+$section-subtitle-author-spacing: (
+  epub: 0.5em,
+  prince: 1em,
+  web: 0.5em
+) !default;
+
+$section-subtitle-font-size: (
+  epub: (16 / 10.5) * 1em,
+  prince: (16 / 10.5) * 1em,
+  web: (16 / 10.5) * 1em
+) !default;
+
+$section-subtitle-font-style: normal !default;
+
+$section-subtitle-align: left;
+
+//section author
+
+$section-author-font-size: (
+  epub: medium,
+  prince: (13 / 10.5) * 1em,
+  web: (13 / 10.5) * 1em
+) !default;
+$section-author-text-transform: none !default;
+$section-author-align: left !default;
+$section-author-font-style: italic !default;
+
+// Chapter Number
+$chapter-number-font-size: (
+  epub: (60 / 10.5) * 1em,
+  prince: (60 / 10.5) * 1em,
+  web: (35 / 10.5) * 1em
+) !default;
+$chapter-number-align: left !default;
+$chapter-number-after-content: '\00A0' !default;
+
+$chapter-number-border-bottom-style: solid !default;
+$chapter-number-border-bottom-width: (epub: 1px, prince: 1px, web: 1px) !default;
+
+// Override variables above this line, using the !default flag to allow further overrides.
+@import 'variables/section-titles';
+
+// Add custom SCSS below these imports and includes.
+@import 'components/section-titles';
+

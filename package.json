@@ -1,0 +1,25 @@
+{
+	"name": "@pressbooks/pressbooks-press",
+	"author": "Ed Beck",
+	"description": "A child theme for SUNY Press.",
+	"license": "gpl-3.0-or-later",
+	"engines": {
+		"node": ">= 10"
+	},
+	"dependencies": {},
+	"devDependencies": {},
+	"scripts": {
+		"install-build-tools": "npm install --no-save pressbooks-build-tools",
+		"fix": "npm run -s fix:styles",
+		"fix:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js --fix \"assets/styles/**/*.scss\" --syntax scss",
+		"lint": "npm run -s lint:styles",
+		"lint:styles": "cross-env NODE_ENV=development node_modules/stylelint/bin/stylelint.js  \"assets/styles/**/*.scss\" --syntax scss",
+		"test": "npm run -s lint"
+	},
+	"eslintConfig": {
+		"extends": "./node_modules/pressbooks-build-tools/config/eslint.js"
+	},
+	"stylelint": {
+		"extends": "./node_modules/pressbooks-build-tools/config/stylelint.js"
+	}
+}
